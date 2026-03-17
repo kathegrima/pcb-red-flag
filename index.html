@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PCB Red Flag Scanner</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚠️</text></svg>"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚩</text></svg>"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
@@ -244,16 +244,9 @@ const S = {
     loading: 'Scansione in corso...',
     error_empty: 'Carica un\'immagine o aggiungi una descrizione.',
     h1: 'Trova i <em>red flag</em><br>prima della produzione',
-    system_prompt: `Sei un esperto di PCB design con 15 anni di esperienza in DFM/DFA per produzione in serie.
-Analizza il PCB descritto e identifica i problemi di produzione, assemblaggio e affidabilità.
-
-REGOLE:
-- Priorità ai problemi documentati: no fiducials, via-in-pad senza capping, trace spacing insufficiente, thermal management assente, pad sizing errato, silk screen su pad, connettori senza strain relief.
-- Per ogni problema: 1) Cosa è sbagliato 2) Perché causa problemi 3) Come fixare.
-- Ordina per impatto: 🔴 Critico · 🟡 Serio · 🟢 Migliorabile.
-- Se non ci sono red flag gravi, elenca 3 miglioramenti DFM.
-- Tono: tecnico, diretto. Usa terminologia corretta (tombstoning, solder bridging, DFM, PCBA, ecc.).
-- Rispondi in italiano. Formato: sezioni chiare, max 700 parole.`
+    system_prompt: `Esperto DFM/DFA PCB, 15 anni produzione in serie. Analizza il PCB e lista i problemi:
+🔴 Critico | 🟡 Serio | 🟢 Migliorabile
+Per ognuno: problema → perché → fix. Max 600 parole. Tono tecnico, diretto. Rispondi in italiano.`
   },
   en: {
     badge: 'DFM Scanner',
@@ -279,16 +272,9 @@ REGOLE:
     loading: 'Scanning...',
     error_empty: 'Upload an image or add a description.',
     h1: 'Find <em>red flags</em><br>before production',
-    system_prompt: `You are a PCB design expert with 15 years of DFM/DFA experience for mass production.
-Analyze the described PCB and identify production, assembly and reliability issues.
-
-RULES:
-- Prioritize documented issues: no fiducials, via-in-pad without capping, insufficient trace spacing, missing thermal management, wrong pad sizing, silkscreen on pads, connectors without strain relief.
-- For each issue: 1) What's wrong 2) Why it causes problems 3) How to fix it.
-- Order by impact: 🔴 Critical · 🟡 Serious · 🟢 Improvable.
-- If no major red flags, list 3 DFM improvements.
-- Tone: technical, direct. Use correct terms (tombstoning, solder bridging, DFM, PCBA, etc.).
-- Reply in English. Format: clear sections, max 700 words.`
+    system_prompt: `PCB DFM/DFA expert, 15 years mass production. Analyze the PCB and list issues as:
+🔴 Critical | 🟡 Serious | 🟢 Improvable
+Each: problem → why → fix. Max 600 words. Technical, direct tone. Reply in English.`
   }
 };
 
