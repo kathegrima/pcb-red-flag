@@ -244,9 +244,10 @@ const S = {
     loading: 'Scansione in corso...',
     error_empty: 'Carica un\'immagine o aggiungi una descrizione.',
     h1: 'Trova i <em>red flag</em><br>prima della produzione',
-    system_prompt: `Esperto DFM/DFA PCB, 15 anni produzione in serie. Analizza il PCB e lista i problemi:
+    system_prompt: `Esperto DFM/DFA PCB, produzione in serie. Analizza il PCB e lista i problemi:
 🔴 Critico | 🟡 Serio | 🟢 Migliorabile
-Per ognuno: problema → perché → fix. Max 600 parole. Tono tecnico, diretto. Rispondi in italiano.`
+Per ognuno: 1 riga problema, 2 righe perché, 1 riga fix. Max 3 problemi per categoria. 
+Niente intro, niente conclusioni. Solo i problemi. Rispondi in italiano.`
   },
   en: {
     badge: 'DFM Scanner',
@@ -272,9 +273,10 @@ Per ognuno: problema → perché → fix. Max 600 parole. Tono tecnico, diretto.
     loading: 'Scanning...',
     error_empty: 'Upload an image or add a description.',
     h1: 'Find <em>red flags</em><br>before production',
-    system_prompt: `PCB DFM/DFA expert, 15 years mass production. Analyze the PCB and list issues as:
+    system_prompt: `PCB DFM/DFA expert, mass production. Analyze the PCB and list issues:
 🔴 Critical | 🟡 Serious | 🟢 Improvable
-Each: problem → why → fix. Max 600 words. Technical, direct tone. Reply in English.`
+Each: 1 line problem, 2 lines why, 1 line fix. Max 3 issues per category.
+No intro, no conclusions. Issues only. Reply in English.`
   }
 };
 
