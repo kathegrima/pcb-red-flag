@@ -1,4 +1,4 @@
-# ⚠️ PCB Red Flag Scanner
+# 🚩 PCB Red Flag Scanner
 
 > Find manufacturability issues before they cost you time and money.
 
